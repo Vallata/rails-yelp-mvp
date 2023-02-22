@@ -1,0 +1,9 @@
+<h1>Create a review</h1>
+<%= simple_form_for [@restaurant, @review] do |f| %> <%# je lui passe l'instance
+de restaurant avec un ID précis, avant de lui passer un review qui reprendra l'ID de ce restaurant %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Cancell', restaurants_path %>
